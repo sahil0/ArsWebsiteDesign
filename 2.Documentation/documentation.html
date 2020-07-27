@@ -1,0 +1,305 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+       
+      <link
+      href="https://fonts.googleapis.com/css?family=Dosis:300,400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+    
+      <title>Document</title>
+      
+  </head>
+  <body >
+    
+
+      <div class="container">
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          
+          
+     
+          
+          <div clas="cnt">
+             <nav class="navbar">
+             <div class="hamburger-menu">
+               <div class="line line-1"></div>
+               <div class="line line-2"></div>
+               <div class="line line-3"></div> 
+             </div>
+            
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="D:\Final\home\main.html" class="nav-link" >HOME</a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#research-paper" class="nav-link" >Research Paper</a>
+              </li>
+        
+              <li class="nav-item">
+                <a href="#brs" class="nav-link" >BRS Algorithm</a>
+              </li>
+        
+              <li class="nav-item">
+                <a href="#ars" class="nav-link" >ARS Algorithm</a>
+              </li>
+        
+              <li class="nav-item">
+                <a href="#building-the-model" class="nav-link" >Building the Model</a>
+              </li>
+        
+              <li class="nav-item">
+                <a href="#training-the-model" class="nav-link" >Training the Model</a>
+              </li>
+        
+          
+            </ul>
+        
+            </nav>
+          </div>
+          
+            
+            <script src="script.js"></script>
+         
+<div class="content" >
+          <h1 id="getting-started-with-gym">Getting Started with ARS</h1>
+          <br>
+
+<p class="Shared-Freeform--introParagraph" id="p1"><strong>Augmented Random Search(ARS)</strong> is actually up to <strong>15 TIMES FASTER </strong>than other algorithms with higher<br>
+ rewards in specific applications! That’s insane! </p>
+
+<p class="Shared-Freeform--introParagraph">One of the ways,<strong> ARS </strong> is able to be so much faster is that unlike a lot of reinforcement learning algorithms that<br>
+ use deep learning with many hidden layers, augmented random search uses perceptrons! There are fewer weights<br> 
+ to adjust and learn, but at the same time, ARS manages to get higher rewards in specific applications! </p>
+
+<p> <strong>So, higher rewards AND faster training time</strong></p>
+<br> 
+<hr />
+<br>
+<br> 
+
+<h1 id="research-paper">Research Paper</h1>
+<br>
+
+
+<p>Simple random search provides a competitive approach to reinforcement learning. A common belief in model-<br>
+free reinforcement learning is that methods based on random search in the parameter space of policies exhibit<br>
+ significantly worse sample complexity than those that explore the space of actions.</p><br> 
+
+<a class="link" href=https://arxiv.org/pdf/1803.07055.pdf>Research Paper</a>
+<br> 
+<br> 
+<hr>
+<br>
+<br> 
+
+
+
+
+
+<h1 id="problem-statement">Problem Statement</h1><br>
+
+<p>Robotic Simulation Application integrated with Salesforce Cloud Environment Using Augmented Random<br>
+ Search Algorithm.</p>
+<br> 
+<hr>
+<br>
+<br> 
+
+
+
+
+<h1 id="approachs">The Approach</h1><br>
+
+<p class="Shared-Freeform--introParagraph"> The solution proposed is to enhance an existing algorithm called Basic Random Search. <br><strong>1.Basic Random Search(BRS)
+   <br>2.Augmeted Random Search(ARS)</strong></p>
+   <br> 
+
+<h2 id="brs">1.BRS</h2><br>
+
+<p>The idea of Basic Random Search is to pick a pramaterized policy 𝜋𝜃,shock(or perturb)the parameters 𝜃 by <br>
+applying +𝛎𝜹 and -𝛎𝜹 (where 𝛎 < 1 is a constant noise and 𝜹 is a random number generate from a normal<br>
+distribution).</p>
+
+<p>Then apply the actions based on 𝜋(𝜃+𝛎𝜹) and 𝜋(𝜃-𝛎𝜹) then collect the rewards r(𝜃+𝛎𝜹) and r(𝜃-𝛎𝜹) resulting from<br>
+those actions.</p>
+
+<p>Now that we have the rewards of the perturbed 𝜃, compute the average Δ = 1/N * Σ[r(𝜃+𝛎𝜹) - r(𝜃-𝛎𝜹)]𝜹 for all the 𝜹<br>
+and we update the parameters 𝜃 using Δ and a learning rate 𝝰. 𝜃ʲ⁺¹ = 𝜃ʲ + 𝝰.Δ</p>
+<br> 
+<br> 
+<hr>
+<br>
+
+<h2>BRS Algorithm</h2>
+<br>
+
+<figure>  
+  <img src="images\brs.png" height="450" width="800" alt="BRS"/>  
+</figure>  
+<br> 
+<br> 
+
+<hr>
+<br>
+
+<h2 id="ars">2.ARS</h2><br>
+<p>The ARS is an improved version of BRS, it contains a three axis of enhancements that
+makes it more performant.</p>
+
+<p><strong>Dividing by the Standard Deviation 𝞼ᵣ </strong></p>
+
+<p>As iterations go on, the difference between r(𝜃+𝛎𝜹) and r(𝜃-𝛎𝜹) can vary significantly, with the learning rate 𝝰 fixed,<br>
+the update 𝜃ʲ⁺¹ = 𝜃ʲ + 𝝰.Δ might oscillate considerably.<br> 
+
+<br>For example if 𝝰 = 0.01 and Δ = 10 then 𝝰.Δ will be 0.1, but if Δ becomes 1000, 𝝰.Δ becomes 10. This kind of <br>
+brutal variations hurts the update. Remember that our goal is to make 𝜃 converge towards values that maximize<br>
+rewards.To avert this type of variations we divide 𝝰.Δ by 𝞼ᵣ(Standard Deviation of the collected rewards).</p>
+
+<p><strong>Normalizing the States</strong></p>
+
+<p>The normalization of states ensures that policies put equal weight on the different components of the states. For<br>
+example suppose that a state component takes values in the range [90, 100] while another state component takes<br>
+values in the range [−1, 1]. Then, the first state component will dominate the computation, while the second won’t<br>
+have any effect.
+
+
+<br><br>To gain an intuition, consider a simple average, suppose C1 = 91 and C2 = 1,the average will be (C1 + C2) / 2 =<br>
+92 / 2 = 46. Now suppose that C2 dropped sharply to the minimum, C2 = -1. The average will be (91–1)/2 = 45 .
+
+
+<br><br>Note that it barely moved with respect to C2 dramatic drop.Now let’s use normalization. For C1 = 91, NC1 = (91–<br>
+90)/(100–90) = 0.1,for C2 = 1, NC2 = (1 - (-1))/(1-(-1)) = 2/2 =1.The normalized average will be (0.1 + 1)/2 = 0.55.<br>
+Now if C2 drops to -1, NC2 = (-1-(-1))/2 = 0 and the normalized average becomes (0.1 + 0)/2 = 0.05.As you can<br> 
+see the average was greatly impacted by the sharp variation of C2.
+
+
+<br><br>The normalization technique used in ARS consists of subtracting the current observed average of the state, from<br> 
+the state input and divide it by the standard deviation of the state:<br>
+(state_input - state_observed_average)/state_std
+</p>
+
+<p><strong>Using top performing directions</strong></p>
+
+<p>It would be useful to remember that our goal is to maximize the collected rewards. However we are computing the<br>
+average reward in each iteration, meaning that in each iteration we comput 2N episodes each one following<br>
+𝜋(𝜃+𝛎𝜹) and 𝜋(𝜃-𝛎𝜹), then we average the collected rewards r(𝜃+𝛎𝜹) and r(𝜃-𝛎𝜹) for all the 2N episodes.<br><br>
+
+
+This present some pitfalls because if some of the rewards are small compared to the others, they will push the<br>
+average down.<br><br>
+
+
+One way remedy to this issue is to sort the rewards in the decreasing order based on the key max(r(𝜃+𝛎𝜹), r(𝜃-𝛎𝜹)).<br>
+Then use only the top b rewards (and their respective perturbation 𝜹) in the computation of the average<br> reward.<br><br>
+
+
+Note that when b = N, the algorithm will be the same as the one without this enhancement.</p>
+<br> <br> 
+<hr>
+<br>
+<h2>ARS Algorithm</h2><br>
+<p>Finally ARS algorithm becomes:</p><br>
+
+  
+  <img src="images\ars.png" height="450" width="800" alt="ARS"/>  
+  
+<br>
+<br>
+<hr>
+<br>
+
+<h1 id="approachs">Code</h1>
+<br>
+<br> 
+
+
+<p class="Shared-Freeform--introParagraph"><strong>1.Building the Model
+   <br><br>2.Training the Model</strong></p>
+   <br> 
+   
+   <h2 id="building-the-model">1.Building the Model</h2>
+   <br> 
+    <img src="images\Building-Model.png" height="500" width="850" alt="Building-Model"/> 
+    <br> 
+    <br> 
+    <hr>
+    <br>
+   <h2 id="training-the-model">2.Training the Model</h2>
+   <br> 
+   
+     <img src="images\Training-Model.png" height="700" width="850" alt="Training-Model"/><br>     
+    <br>
+    <hr>
+    <a class="button" href="D:\Final\home\main.html">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      BACK
+  </a> 
+    <span style="padding-left:220px;">
+  <a class="button" href="D:\Final\home\main.html">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      HOME
+  </a> 
+  
+  <span style="padding-left:220px;"></span>
+  <a class="button" href="D:\Final\Toolkit\toolkit.html">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      NEXT
+  </a> 
+  </div>
+          <div class="border" ></div>
+          <div class="border" ></div>   
+  
+     
+
+      <svg>
+          <defs>
+              <filter id='goo'>
+                  <feGaussianBlur in= 'SourceGraphic'
+                  stdDeviat='10'/>
+
+                  <feColorMatrix in='name' mode='matrix'
+                  values= '1 0 0 0 0 
+                           0 1 0 0 0
+                           0 0 1 0 0 
+                           0 0 0 30 -15' />
+                 <feBlend in= 'SourceGraphic'/>          
+              </filter>
+          </defs>
+
+      </svg>
+      
+  </body>
+  </html>
